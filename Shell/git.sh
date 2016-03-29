@@ -1,3 +1,7 @@
+function push {
+  git add --all && git commit -m "$1" && git push origin master
+}
+
 #############################################################
 # The following script was taken from
 # http://stackoverflow.com/a/18915067/1876983
