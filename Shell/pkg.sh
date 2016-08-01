@@ -1,5 +1,5 @@
 function update {
-	sudo pkg update
+	sudo pkg update && sudo pkg upgrade
 }
 
 function pkin {
