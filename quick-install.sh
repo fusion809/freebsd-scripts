@@ -4,28 +4,28 @@ if ! [[ -d $HOME/GitHub ]]; then
 fi
 
 # Get openssh, if not pre-installed and Zsh
-sudo dnf install -y git openssh zsh
+sudo pkg install -y git openssh zsh
 
-# Clone fedora-scripts repo
-if ! [[ -d $HOME/GitHub/fedora-scripts ]] || ! [[ -d $HOME/GitHub/mine/fedora-scripts ]]; then
-  git clone https://github.com/fusion809/fedora-scripts $HOME/GitHub/mine/fedora-scripts
+# Clone freebsd-scripts repo
+if ! [[ -d $HOME/GitHub/freebsd-scripts ]] || ! [[ -d $HOME/GitHub/mine/freebsd-scripts ]]; then
+  git clone https://github.com/fusion809/freebsd-scripts $HOME/GitHub/mine/freebsd-scripts
   # Copy across
-  cp -a $HOME/GitHub/mine/fedora-scripts/{Shell,.bashrc,.zshrc} $HOME/
-  sudo cp -a $HOME/GitHub/mine/fedora-scripts/root/{Shell,.bashrc,.zshrc} /root/
-elif [[ -d $HOME/GitHub/fedora-scripts ]]; then
-  cd $HOME/GitHub/fedora-scripts
+  cp -a $HOME/GitHub/mine/freebsd-scripts/{Shell,.bashrc,.zshrc} $HOME/
+  sudo cp -a $HOME/GitHub/mine/freebsd-scripts/root/{Shell,.bashrc,.zshrc} /root/
+elif [[ -d $HOME/GitHub/freebsd-scripts ]]; then
+  cd $HOME/GitHub/freebsd-scripts
   git pull origin master
   cd -
   # Copy across
-  cp -a $HOME/GitHub/fedora-scripts/{Shell,.bashrc,.zshrc} $HOME/
-  sudo cp -a $HOME/GitHub/fedora-scripts/root/{Shell,.bashrc,.zshrc} /root/
-elif [[ -d $HOME/GitHub/mine/fedora-scripts ]]; then
-  cd $HOME/GitHub/mine/fedora-scripts
+  cp -a $HOME/GitHub/freebsd-scripts/{Shell,.bashrc,.zshrc} $HOME/
+  sudo cp -a $HOME/GitHub/freebsd-scripts/root/{Shell,.bashrc,.zshrc} /root/
+elif [[ -d $HOME/GitHub/mine/freebsd-scripts ]]; then
+  cd $HOME/GitHub/mine/freebsd-scripts
   git pull origin master
   cd -
   # Copy across
-  cp -a $HOME/GitHub/mine/fedora-scripts/{Shell,.bashrc,.zshrc} $HOME/
-  sudo cp -a $HOME/GitHub/mine/fedora-scripts/root/{Shell,.bashrc,.zshrc} /root/
+  cp -a $HOME/GitHub/mine/freebsd-scripts/{Shell,.bashrc,.zshrc} $HOME/
+  sudo cp -a $HOME/GitHub/mine/freebsd-scripts/root/{Shell,.bashrc,.zshrc} /root/
 fi
 
 if ! [[ -d $HOME/.oh-my-zsh ]]; then
@@ -58,6 +58,6 @@ if ! [[ -d $HOME/.oh-my-zsh/plugins/zsh-history-substring-search ]]; then
 fi
 
 # Change default login shell to Zsh
-chsh -s /bin/zsh
-sudo chsh -s /bin/zsh
-/bin/zsh
+chsh -s /usr/local/bin/zsh
+sudo chsh -s /usr/local/bin/zsh
+/usr/local/bin/zsh
