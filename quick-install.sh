@@ -4,22 +4,14 @@ if ! [[ -d $HOME/GitHub ]]; then
 fi
 
 # Get openssh, if not pre-installed and Zsh
-sudo pkg install -y git openssh zsh
+sudo pkg install -y git openssh-portable zsh
 
 # Clone freebsd-scripts repo
-if ! [[ -d $HOME/GitHub/freebsd-scripts ]] || ! [[ -d $HOME/GitHub/mine/freebsd-scripts ]]; then
+if ! [[ -d $HOME/GitHub/mine/freebsd-scripts ]]; then
   git clone https://github.com/fusion809/freebsd-scripts $HOME/GitHub/mine/freebsd-scripts
-  # Copy across
   cp -a $HOME/GitHub/mine/freebsd-scripts/{Shell,.bashrc,.zshrc} $HOME/
   sudo cp -a $HOME/GitHub/mine/freebsd-scripts/root/{Shell,.bashrc,.zshrc} /root/
-elif [[ -d $HOME/GitHub/freebsd-scripts ]]; then
-  cd $HOME/GitHub/freebsd-scripts
-  git pull origin master
-  cd -
-  # Copy across
-  cp -a $HOME/GitHub/freebsd-scripts/{Shell,.bashrc,.zshrc} $HOME/
-  sudo cp -a $HOME/GitHub/freebsd-scripts/root/{Shell,.bashrc,.zshrc} /root/
-elif [[ -d $HOME/GitHub/mine/freebsd-scripts ]]; then
+else
   cd $HOME/GitHub/mine/freebsd-scripts
   git pull origin master
   cd -
