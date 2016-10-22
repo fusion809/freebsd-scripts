@@ -13,3 +13,7 @@ function pkrm {
 }
 
 alias spry=pkrm
+
+function pks {
+	sudo pkg search "$@"
+}
