@@ -1,5 +1,5 @@
 function cpsh {
-	cp -a ~/Shell/*.sh ~/GitHub/freebsd-scripts/Shell
-	cp -a ~/.zshrc ~/GitHub/freebsd-scripts/
+	cp -a $HOME/Shell/*.sh $HOME/GitHub/mine/freebsd-scripts/Shell
+	cp -a $HOME/.zshrc $HOME/GitHub/mine/freebsd-scripts/
 }
 

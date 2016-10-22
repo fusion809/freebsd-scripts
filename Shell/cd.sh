@@ -1,15 +1,15 @@
 function cdsh {
-	cd ~/Shell
+	cd $HOME/Shell
 }
 
 function cdi {
-	cd ~/.kde4/share/icons
+	cd $HOME/.kde4/share/icons
 }
 
 function cdg {
-	cd ~/GitHub
+	cd $HOME/GitHub
 }
 
 function cdfs {
-	cd ~/GitHub/freebsd-scripts
+	cd $HOME/GitHub/mine/freebsd-scripts
 }
