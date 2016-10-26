@@ -7,9 +7,13 @@ function cdi {
 }
 
 function cdg {
-	cd $HOME/GitHub
+	cd "$HOME/GitHub/$1"
+}
+
+function cdgm {
+	cdg "mine/$1"
 }
 
 function cdfs {
-	cd $HOME/GitHub/mine/freebsd-scripts
+	cdgm "freebsd-scripts/$1"
 }
