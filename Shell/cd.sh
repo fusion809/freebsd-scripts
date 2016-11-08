@@ -17,3 +17,7 @@ function cdgm {
 function cdfs {
 	cdgm "freebsd-scripts/$1"
 }
+
+function cdp {
+	cd $HOME/Programs
+}
