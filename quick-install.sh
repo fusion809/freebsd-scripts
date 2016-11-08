@@ -11,6 +11,10 @@ if ! [[ -d $HOME/GitHub/mine/freebsd-scripts ]]; then
   git clone https://github.com/fusion809/freebsd-scripts $HOME/GitHub/mine/freebsd-scripts
   cp -a $HOME/GitHub/mine/freebsd-scripts/{Shell,.bashrc,.zshrc} $HOME/
   sudo cp -a $HOME/GitHub/mine/freebsd-scripts/root/{Shell,.bashrc,.zshrc} /root/
+  cd $HOME/GitHub/mine/freebsd-scripts
+  git remote rm origin
+  git remote add origin git@github.com:fusion809/freebsd-scripts.git
+  git remote add upstream git@github.com:fusion809/freebsd-scripts.git
 else
   cd $HOME/GitHub/mine/freebsd-scripts
   git pull origin master
