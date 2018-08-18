@@ -8,6 +8,10 @@ function pkin {
 
 alias spiy=pkin
 
+function spi {
+	sudo pkg install "$@"
+}
+
 function pkrm {
 	sudo pkg remove -y $@
 }
