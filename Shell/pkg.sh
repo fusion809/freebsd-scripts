@@ -7,6 +7,9 @@ function pkin {
 }
 
 alias spiy=pkin
+alias spki=pkin
+alias spkiy=pkin
+alias spiy=pkin
 
 function spi {
 	sudo pkg install "$@"
@@ -23,3 +26,4 @@ function pks {
 }
 
 alias spks=pks
+alias sps=pks
