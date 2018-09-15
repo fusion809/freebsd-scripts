@@ -7,3 +7,7 @@ function vd {
 function vsh {
     vd "$HOME/Shell/$1"
 }
+
+function vrc {
+	vim $HOME/.vimrc
+}

@@ -1,3 +1,7 @@
+function cdi3 {
+	cd $HOME/.i3
+}
+
 function cdsh {
     cd $HOME/Shell
 }
@@ -14,6 +18,14 @@ function cdgm {
     cdg "mine/$1"
 }
 
+function cdcf {
+	cdgm "config/$1"
+}
+
+function cdci3 {
+	cdcf "i3-configs/$1"
+}
+
 function cded {
     cdgm "editors/$1"
 }
@@ -24,6 +36,14 @@ function cdvm {
 
 function cdsc {
     cdgm "scripts/$1"
+}
+
+function cdcs {
+	cdsc "common-scripts/$1"
+}
+
+function cdcsu {
+	cdcs "usr/local/bin/$1"
 }
 
 function cdfs {
