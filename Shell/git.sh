@@ -17,8 +17,12 @@ function gitsw {
   fi
 }
 
+function git-branch {
+    git rev-parse --abbrev-ref HEAD
+}
+
 function push {
-  git add --all && git commit -m "$1" && git push origin master
+  git add --all && git commit -m "$1" && git push origin $(git-branch)
 }
 
 function shup {
