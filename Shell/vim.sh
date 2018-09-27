@@ -11,3 +11,11 @@ function vsh {
 function vrc {
 	vim $HOME/.vimrc
 }
+
+function vzsh {
+	vim $HOME/.zshrc
+}
+
+function vbash {
+	vim $HOME/.bashrc
+}
