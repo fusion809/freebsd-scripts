@@ -1,0 +1,4 @@
+#!/usr/local/bin/bash
+UPTIME=$(uptime | sed 's/[0-9]*:[0-9]*[A-P]M.*up //g' | cut -d ',' -f 1)
+
+printf "%s\n" "Up ${UPTIME}"

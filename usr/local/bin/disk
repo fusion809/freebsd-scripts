@@ -1,0 +1,4 @@
+#!/usr/local/bin/bash
+DISK_AVAIL=$(df -h / | tail -n 1 | tr ' ' '\n' | sed '/^$/d' | tail -n 5 | head -n 1)
+DISK_USED=$(df -h / | tail -n 1 | tr ' ' '\n' | sed '/^$/d' | tail -n 5 | head -n 3 | head -n 2 | tail -n 1)
+printf "${DISK_USED}/${DISK_AVAIL}\n"

@@ -1,0 +1,4 @@
+#!/usr/local/bin/bash
+CPU=$(octave --eval "$(iostat | tr ' ' '\n' | sed '/^$/d' | tail -n 5 | head -n 4 | tr '\n' '+' | sed 's/+$//g')" | cut -d ' ' -f 4)
+
+printf "%s\n" "CPU ${CPU}%"
