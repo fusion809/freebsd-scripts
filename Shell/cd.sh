@@ -61,3 +61,15 @@ function cdzs {
 function cdp {
     cd $HOME/Programs
 }
+
+function cdpi {
+	cd $HOME/Pictures/$1
+}
+
+function cdps {
+	cdpi "Screenshots/$1"
+}
+
+function cdpsi {
+	cdps "i3/$1"
+}
