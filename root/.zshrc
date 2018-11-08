@@ -2,6 +2,7 @@
 export TERM="xterm-256color"
 # Path to your oh-my-zsh installation.
 export ZSH=/home/fusion809/.oh-my-zsh
+export ZSH_DISABLE_COMPFIX="true"
 
 # Set name of the theme to load.
 # Look in $HOME/.oh-my-zsh/themes/

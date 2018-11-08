@@ -1,0 +1,2 @@
+#!/usr/local/bin/bash
+sysctl -a | grep temper | tail -r | cut -d ':' -f 2 | sed 's/ //g' | tr '\n' ' '

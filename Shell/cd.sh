@@ -61,3 +61,49 @@ function cdzs {
 function cdp {
     cd $HOME/Programs
 }
+
+function cdpi {
+	cd $HOME/Pictures/$1
+}
+
+function cdps {
+	cdpi "Screenshots/$1"
+}
+
+function cdpsi {
+	cdps "i3/$1"
+}
+
+function cdl {
+	cd "$HOME/.local/$1"
+}
+
+function cdlb {
+	cdl "bin/$1"
+}
+
+function cdls {
+	cdl "share/$1"
+}
+
+function cdlsi {
+	cdls "icons/$1"
+}
+
+alias cdli=cdlsi
+
+function cdi {
+	cd "$HOME/.icons/$1"
+}
+
+function cdlst {
+	cdls "themes/$1"
+}
+
+alias cdlt=cdlst
+
+function cdt {
+	cd "$HOME/.themes/$1"
+}
+
+alias cdth=cdt

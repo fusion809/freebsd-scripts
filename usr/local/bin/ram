@@ -1,0 +1,4 @@
+#!/usr/local/bin/bash
+RAM=$(octave --eval "($(freecolor | head -n 1 | cut -d ' ' -f 5 | cut -d '(' -f 2 | cut -d ')' -f 1 | cut -d '/' -f 2)-$(freecolor | head -n 1 | cut -d ' ' -f 5 | cut -d '(' -f 2 | cut -d ')' -f 1 | cut -d '/' -f 1))/(1024^2)" | cut -d ' ' -f 4)
+RAM_AVAILABLE=$(octave --eval "$(freecolor | head -n 1 | cut -d ' ' -f 5 | cut -d '(' -f 2 | cut -d ')' -f 1 | cut -d '/' -f 2)/(1024^2)" | cut -d ' ' -f 4)
+printf "RAM ${RAM}/${RAM_AVAILABLE}"
