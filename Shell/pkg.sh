@@ -2,6 +2,12 @@ function update {
 	sudo pkg update && sudo pkg upgrade -y
 }
 
+alias spuy=update
+
+function spu {
+	sudo pkg upgrade "$@"
+}
+
 function pkin {
 	sudo pkg install -y $@
 }
