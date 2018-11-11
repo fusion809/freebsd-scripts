@@ -1,0 +1,3 @@
+[submodule "freebsd-zfs-manual-install"]
+	path = zfs-manual-install
+	url = git@github.com:fusion809/freebsd-zfs-manual-install.git

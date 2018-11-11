@@ -17,5 +17,3 @@ or:
 sudo pkg install -y bash
 /usr/local/bin/bash -c "$(curl -sL https://git.io/vPd0d)"
 ```
-
-In the zfs-manual-install directory there is a [markdown file](https://github.com/fusion809/freebsd-scripts/blob/master/zfs-manual-install/README.md), along with three shell scripts that guide one through the process of manually installing FreeBSD on a self-setup ZFS file system. It is based on this [FreeBSD forum thread](https://forums.freebsd.org/threads/installing-freebsd-manually-no-installer.63201/) (I have archived it [here](https://web.archive.org/web/20181108194616/https://forums.freebsd.org/threads/installing-freebsd-manually-no-installer.63201/), in case the forum changes its location, or deletes it).
