@@ -107,3 +107,5 @@ for i in $HOME/Shell/*.sh
 do
   . "$i"
 done
+
+alias ls='/bin/ls --color=always'
